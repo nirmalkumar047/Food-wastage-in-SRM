@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel Wastage Checker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Check Food Wastage</h1>
+    <form method="POST" action="/check">
+        <label for="hostel">Select Hostel:</label>
+        <select name="hostel" required>
+            {% for hostel in hostels %}
+                <option value="{{ hostel }}">{{ hostel }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label for="date">Select Date:</label>
+        <input type="date" name="date" required>
+        <br><br>
+
+        <label for="meal">Select Meal:</label>
+        <select name="meal" required>
+            <option value="Break Fast">Break Fast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Check Wastage">
+    </form>
+</body>
+</html>

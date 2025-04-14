@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wastage Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 id="output">Food Wastage Result</h1>
+    <p><strong>Hostel:</strong> {{ hostel }}</p>
+    <p><strong>Date:</strong> {{ date }}</p>
+    <p><strong>Meal:</strong> {{ meal }}</p>
+    <p><strong>Wastage (Kg):</strong> {{ wastage }}</p>
+
+    <a href="/">Check Another</a>
+</body>
+</html>
